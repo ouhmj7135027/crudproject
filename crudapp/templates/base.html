@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style= "background-color: rgb(244, 221, 247)">
+          <a class="navbar-brand" href="{% url 'index' %}" style="color:rgb(158, 154, 154);">CRUD,MEMO</a>
+          
+          </button>
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="{% url 'index' %}" style="color:rgb(59, 56, 56);">Index</a></li>
+                      <li><a href="{% url 'new' %}" style="color:rgb(59, 56, 56);" >New</a></li>
+                      <li><a href="{% url 'portfolio' %}" style="color:rgb(59, 56, 56);" >portfolio</a></li>
+                   
+                    </ul>
+                   
+        </nav>
+  
+<br>
+        {% block content %}
+        {% endblock %}
+        <br><br><br><br><br><br>
+        <form class="form-inline my-2 my-lg-0">
+          &nbsp; <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+</body>

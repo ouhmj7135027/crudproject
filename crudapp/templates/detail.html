@@ -1,0 +1,15 @@
+{% extends 'base.html '%}
+{% block content %}
+        
+           
+                {{blog.title}} get으로 불러온 애<br>
+
+                {{blog2.title}} 404로 불러온 애
+                
+                {{blog2.body}}<br>
+
+                <a href="{% url 'edit' blog.id %}">수정</a><br>
+                <a href="{% url 'delete' blog.id %}">삭제</a>
+           
+            
+{% endblock %}   

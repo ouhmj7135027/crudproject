@@ -1,0 +1,25 @@
+{% extends 'base.html '%}
+{% block content %}
+{%if posts.has_previous%}
+<a href="?page=1">First</a>
+<a href="?page={{posts.previous_page_number}}">Previous</a>
+{%endif%}
+
+&nbsp;<span>{{posts.number}}</span>
+<span>of</span>
+<span>{{posts.paginator.num_pages}}</span>
+
+{%if posts.has_next%}
+<a href="?page={{posts.next_page_number}}">Next</a>
+<a href="?page={{posts.paginator.num_pages}}">Last</a>
+{%endif%}
+<br><br>
+{%for i in posts%}
+&nbsp; <a href="{%url 'detail' i.id%}">{{i.id}}</a><br>
+&nbsp;   {{i.title}}<br>
+&nbsp;  {{i.body}}<br>
+&nbsp;   {{i.date}}<br>
+   <br><br>
+{%endfor%}
+
+{% endblock %} 

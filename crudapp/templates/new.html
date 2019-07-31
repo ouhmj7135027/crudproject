@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    
+    
+    <title>네번째세션-CR</title>
+</head>
+<body>
+    
+    
+        <div class="container">
+
+
+            <form method="post" action="{% url 'create' %}">
+                {%csrf_token%}
+                    <div class="form-group">
+                    <label for="title">title:</label>
+                    <input type="text" class="form-control" name="title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="body">body:</label>
+                    <textarea class="form-control" rows="5" name="body"></textarea>
+                  </div>
+    
+                <br>
+                    <input class="btn btn-dark" type="submit" value="완료" >
+            </form>
+
+            
+        </div>
+        
+</body>
+
+
+
