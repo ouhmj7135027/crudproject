@@ -6,4 +6,4 @@ class Blog(models.Model):
     date = models.DateTimeField('date published')
 
     def sum(self):
-        return self.body[:2]
+        return body[:2]
